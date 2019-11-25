@@ -22,7 +22,6 @@ import mozilla.lockbox.action.DataStoreAction
 import mozilla.lockbox.action.LifecycleAction
 import mozilla.lockbox.action.RouteAction
 import mozilla.lockbox.flux.Dispatcher
-import mozilla.lockbox.log
 import mozilla.lockbox.robots.accountSettingScreen
 import mozilla.lockbox.robots.autofillOnboardingScreen
 import mozilla.lockbox.robots.disconnectDisclaimer
@@ -276,7 +275,7 @@ class Navigator {
         gotoItemDetail_from_itemList(position)
     }
 
-    private fun gotoItemDetail_from_itemList(position: Int = 0) {
+    fun gotoItemDetail_from_itemList(position: Int = 0) {
         itemList { selectItem(position) }
         checkAtItemDetail()
     }
